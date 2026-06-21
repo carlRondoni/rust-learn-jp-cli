@@ -55,7 +55,6 @@ fn main() {
 
         let start = Instant::now();
 
-        println!("Romaji >");
         io::stdout().flush().unwrap();
 
         let mut input = String::new();
@@ -73,14 +72,14 @@ fn main() {
             successes += 1;
         } else {
             println!(
-                "Incorrect. The correct answer is written '{}' and in romanji '{}'",
+                "Incorrect. This character is written like '{}' and in romanji '{}'",
                 kana_item.written,
                 kana_item.romaji.join(", ")
             );
             errors += 1;
         }
 
-        println!("\nTime taken: {:.2?} secs", elapsed.as_secs());
+        println!("\nTime taken: {} secs", elapsed.as_secs());
         thread::sleep(Duration::from_secs(4));
     }
 
@@ -90,11 +89,11 @@ fn main() {
     println!("Successes: {successes}");
     println!("Errors: {errors}");
 
-    let percentaje = if total > 0 {
+    let percent = if total > 0 {
         (successes as f64 / total as f64) * 100.0
     } else {
         0.0
     };
 
-    println!("Overall Knowledge: {:.2}%", percentaje);
+    println!("Overall Knowledge: {:.2}%", percent);
 }
