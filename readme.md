@@ -22,4 +22,6 @@ cargo run
 
 - select between basic, dakuten, handakuten, combinations or all.
 - endless mode and full mode.
-- train writting verbs tense and negation.
+- MODE verbs negative tense.
+- MODE verbs past tense.
+- MODE relative sentence.

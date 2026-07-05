@@ -1,3 +1,4 @@
-pub mod hiragana;
+pub mod kana_mode;
+mod hiragana;
 mod kana_struct;
-pub mod katakana;
+mod katakana;
